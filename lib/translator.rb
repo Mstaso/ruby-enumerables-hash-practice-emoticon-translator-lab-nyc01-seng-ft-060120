@@ -17,10 +17,8 @@ end
 def get_japanese_emoticon(path, emoticon_array)
   new_hash = load_library(path)
   result = new_hash["angel"][:japanese]
-  if emoticon_array.include? :english
-    new_hash[0[1]]
-  else  
-    puts "Sorry, that emoticon was not found" 
+ if result == nil
+    result = "Sorry, that emoticon was not found" 
   end
   result
 end
