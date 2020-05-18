@@ -15,7 +15,6 @@ end
 
 
 def get_japanese_emoticon(path, emoticon_array)
-  binding.pry
   new_hash = load_library(path)
   result = new_hash["angel"][:japanese]
  if result == nil
