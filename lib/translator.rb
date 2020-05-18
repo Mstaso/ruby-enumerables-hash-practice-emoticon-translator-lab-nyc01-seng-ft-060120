@@ -16,7 +16,7 @@ end
 
 def get_japanese_emoticon(path, emoticon_array)
   new_hash = load_library(path)
-  emotion_string = new_hash[0[1]]
+  
   if emoticon_array.include? :english
     new_hash[0[1]]
   else  
@@ -25,7 +25,7 @@ def get_japanese_emoticon(path, emoticon_array)
   result
 end
 
-def get_english_meaning (path, emotion_string)
+def get_english_meaning (path, emoticon_array)
     new_hash = load_library(path)
     result = new_hash[emoticon_array[0]]
   if result == nil
