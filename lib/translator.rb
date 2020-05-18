@@ -16,6 +16,7 @@ end
 
 def get_japanese_emoticon(path, emoticon_array)
   new_hash = load_library(path)
+  binding.pry
   emoticon_array = new_hash[0[1]]
   if emoticon_array.include? :english
     new_hash[0[1]]
