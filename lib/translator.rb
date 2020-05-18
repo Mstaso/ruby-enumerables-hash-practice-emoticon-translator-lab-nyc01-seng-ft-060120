@@ -16,9 +16,12 @@ end
 
 def get_japanese_emoticon(path, emoticon_array)
   new_hash = load_library(path)
+  binding.pry
   result = new_hash["angel"][:japanese]
- if result == nil
-    result = "Sorry, that emoticon was not found" 
+  if new_hash[:japanese]
+    new_hash[:english]
+  else
+    puts "Sorry, that emoticon was not found"
   end
   result
 end
